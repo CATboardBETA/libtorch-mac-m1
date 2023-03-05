@@ -61,7 +61,7 @@ jobs:
         run: |
           zip -r libtorch-${{ github.event.inputs.branch }}.zip libtorch/
       - name: GH Release
-        uses: softproprs/action-gh-release@v0.1.15
+        uses: softprops/action-gh-release@v0.1.15
         with:
           tag_name: ${{ steps.options.outputs.tag_name }}
           files: libtorch-${{ github.event.inputs.branch }}.zip
